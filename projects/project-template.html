@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details | Mohan</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Reuse main styles (path adjusted) -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Project Specific Overrides */
+        .project-header {
+            padding: 4rem 0 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            margin-bottom: 2rem;
+        }
+
+        .back-nav {
+            margin-bottom: 2rem;
+        }
+
+        .tech-stack-tags {
+            display: flex;
+            gap: 1rem;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
+        }
+
+        .tech-tag {
+            background: rgba(139, 92, 246, 0.1);
+            color: var(--accent-primary);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .project-content-section {
+            margin-bottom: 4rem;
+        }
+
+        .project-content-section h2 {
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .project-content-section p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .gallery-item {
+            background: var(--bg-secondary);
+            border-radius: var(--border-radius);
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Adjust layout since no sidebar here */
+        .project-page .content {
+            margin-left: 0;
+            max-width: 900px;
+            /* Narrower for reading */
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body class="project-page">
+
+    <main class="content">
+
+        <!-- Back Button -->
+        <div class="project-header">
+            <div class="back-nav">
+                <a href="../index.html#projects" class="btn-text"><i class="fas fa-arrow-left"></i> Back to
+                    Portfolio</a>
+            </div>
+            <h1>Project Title Goes Here</h1>
+            <div class="tech-stack-tags">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">MongoDB</span>
+            </div>
+            <div class="project-links">
+                <a href="#" class="btn btn-primary"><i class="fab fa-github"></i> GitHub Repo</a>
+                <a href="#" class="btn btn-outline"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            </div>
+        </div>
+
+        <div class="project-body">
+
+            <section class="project-content-section">
+                <h2>The Problem</h2>
+                <p>
+                    Describe the problem this project was trying to solve. What was the pain point?
+                    Why was this solution necessary? Keep it concise but descriptive.
+                </p>
+            </section>
+
+            <section class="project-content-section">
+                <h2>Project Overview</h2>
+                <p>
+                    A high-level explanation of what the application does. Mention key features and functionality.
+                    Explain how the tech stack was chosen and how it fits together.
+                </p>
+            </section>
+
+            <section class="project-content-section">
+                <h2>Screenshots</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">Screenshot 1</div>
+                    <div class="gallery-item">Screenshot 2</div>
+                    <div class="gallery-item">Screenshot 3</div>
+                </div>
+            </section>
+
+            <section class="project-content-section">
+                <h2>Role & Timeline</h2>
+                <p><strong>Role:</strong> Lead Full-stack Developer</p>
+                <p><strong>Timeline:</strong> September 2023 - October 2023 (4 Weeks)</p>
+            </section>
+
+            <section class="project-content-section">
+                <h2>Impact & Learnings</h2>
+                <p>
+                    What was the result? Did you improve performance? What key concepts did you learn?
+                    (e.g., "Learned how to implement state management effectively...")
+                </p>
+
+                <div style="margin-top: 4rem; text-align: center;">
+                    <a href="../index.html#projects" class="btn btn-outline">Back to Projects</a>
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
