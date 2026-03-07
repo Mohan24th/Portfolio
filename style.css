@@ -556,6 +556,7 @@ section {
     padding: 3rem;
     border-radius: var(--border-radius);
     max-width: 600px;
+    margin: auto;
 }
 
 .contact-item {

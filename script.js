@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Add active class to corresponding link
                 const id = entry.target.getAttribute('id');
                 const activeLink = document.querySelector(`.nav-links a[href="#${id}"]`);
-                if (activeLink) {
+                if (activeLink!== null) {
                     activeLink.classList.add('active');
                 }
             }
