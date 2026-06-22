@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document ChatBot (RAG) | Mohan</title>
+
+```
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Common CSS -->
+<link rel="stylesheet" href="../style.css">
+
+<!-- Project Specific CSS -->
+<link rel="stylesheet" href="style.css">
+```
+
+</head>
+
+<body>
+
+```
+<!-- Sidebar -->
+<nav class="sidebar">
+    <ul class="nav-links">
+        <li>
+            <a href="../index.html#hero">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="../index.html#projects" class="active">
+                <i class="fas fa-laptop-code"></i>
+                <span>Projects</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="../index.html#contact">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+            </a>
+        </li>
+    </ul>
+
+    <div class="social-links-mini">
+        <a href="https://github.com/Mohan24th" target="_blank">
+            <i class="fab fa-github"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/in/adapa-mohan-33796a281/" target="_blank">
+            <i class="fab fa-linkedin"></i>
+        </a>
+    </div>
+</nav>
+
+<main class="content">
+
+    <!-- HERO -->
+    <section class="project-hero">
+
+        <h1>Document ChatBot (RAG)</h1>
+
+        <p class="project-tagline">
+            An AI-powered document question-answering system that enables users to
+            upload PDF files and interact with them through natural language
+            conversations using Retrieval-Augmented Generation (RAG).
+        </p>
+
+        <div class="project-links">
+
+            <a href="https://document-chatbot-rag-demo.streamlit.app/"
+                target="_blank" class="btn btn-primary">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+
+            <a href="https://github.com/Mohan24th/Document-Chatbot"
+                target="_blank" class="btn btn-outline">
+                <i class="fab fa-github"></i> Source Code
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- USE CASE -->
+    <section class="project-section">
+
+        <h2>
+            <i class="fas fa-bullseye"></i>
+            Use Case & Problem Solved
+        </h2>
+
+        <div class="project-content">
+
+            <p>
+                Searching through lengthy documents to find specific information
+                can be time-consuming and inefficient. Users often spend significant
+                time manually reading PDFs, reports, notes, and research papers to
+                locate relevant content.
+            </p>
+
+            <br>
+
+            <p>
+                This project solves that problem by allowing users to upload PDF
+                documents and ask questions in natural language. The system retrieves
+                relevant information from the document and generates accurate,
+                context-aware responses grounded in the uploaded content.
+            </p>
+
+            <br>
+
+            <h3>Key Features:</h3>
+
+            <ul style="list-style-position: inside; margin-top: 1rem; color: var(--text-secondary);">
+                <li>PDF document upload and processing</li>
+                <li>Document chunking and preprocessing</li>
+                <li>Vector embedding generation</li>
+                <li>Semantic search with ChromaDB</li>
+                <li>Context-aware AI responses</li>
+                <li>Retrieval-Augmented Generation (RAG)</li>
+                <li>Interactive conversational interface</li>
+                <li>Fast document-based question answering</li>
+            </ul>
+
+        </div>
+
+    </section>
+
+    <!-- DESCRIPTION -->
+    <section class="project-section">
+
+        <h2>
+            <i class="fas fa-info-circle"></i>
+            Project Description
+        </h2>
+
+        <div class="project-content">
+
+            <p>
+                The Document ChatBot is a Retrieval-Augmented Generation (RAG)
+                application developed to enable intelligent conversations with
+                uploaded PDF documents. Users can upload documents and receive
+                accurate answers based on the document content rather than relying
+                solely on the language model's general knowledge.
+            </p>
+
+            <br>
+
+            <p>
+                The system processes uploaded PDFs by splitting them into smaller
+                chunks and generating vector embeddings. These embeddings are stored
+                in ChromaDB, allowing efficient semantic search and retrieval of
+                relevant information when users ask questions.
+            </p>
+
+            <br>
+
+            <p>
+                Using LangChain pipelines and Google's Gemini model, the application
+                retrieves the most relevant document chunks and provides contextual,
+                accurate responses. This ensures that answers remain grounded in the
+                uploaded documents while maintaining a natural conversational
+                experience.
+            </p>
+
+            <br>
+
+            <p>
+                Key Concepts Implemented:<br>
+                • Retrieval-Augmented Generation (RAG)<br>
+                • LangChain Framework<br>
+                • Vector Databases (ChromaDB)<br>
+                • Semantic Search & Embeddings<br>
+                • PDF Processing & Text Chunking<br>
+                • LLM Integration with Gemini AI<br>
+                • Streamlit Application Development
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- TECH STACK -->
+    <section class="project-section">
+
+        <h2>
+            <i class="fas fa-layer-group"></i>
+            Tech Stack
+        </h2>
+
+        <div class="tech-stack">
+
+            <div class="tech-item">
+                <i class="fab fa-python"></i>
+                <span>Python</span>
+            </div>
+
+            <div class="tech-item">
+                <i class="fas fa-link"></i>
+                <span>LangChain</span>
+            </div>
+
+            <div class="tech-item">
+                <i class="fas fa-database"></i>
+                <span>ChromaDB</span>
+            </div>
+
+            <div class="tech-item">
+                <i class="fas fa-brain"></i>
+                <span>Gemini AI</span>
+            </div>
+
+            <div class="tech-item">
+                <i class="fas fa-file-pdf"></i>
+                <span>PyPDF</span>
+            </div>
+
+            <div class="tech-item">
+                <i class="fas fa-server"></i>
+                <span>FastAPI</span>
+            </div>
+
+            <div class="tech-item">
+                <i class="fas fa-window-maximize"></i>
+                <span>Streamlit</span>
+            </div>
+
+            <div class="tech-item">
+                <i class="fas fa-vector-square"></i>
+                <span>RAG</span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Mohan. All rights reserved.</p>
+    </footer>
+
+</main>
+```
+
+</body>
+
+</html>
