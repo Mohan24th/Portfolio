@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bounty Hunt | Mohan</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="../style.css">
+
+    <!-- Project Specific CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <ul class="nav-links">
+            <li>
+                <a href="../index.html#hero">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="../index.html#projects" class="active">
+                    <i class="fas fa-laptop-code"></i>
+                    <span>Projects</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="../index.html#contact">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact</span>
+                </a>
+            </li>
+        </ul>
+
+        <div class="social-links-mini">
+            <a href="https://github.com/Mohan24th" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/adapa-mohan-33796a281/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+    </nav>
+
+    <main class="content">
+
+        <!-- HERO -->
+        <section class="project-hero">
+
+            <h1>Bounty Board DAO</h1>
+
+            <p class="project-tagline">
+                <strong>Get work done, pay on‑chain.</strong> A decentralized bounty
+                board on Cardano — post a task, fund it in ADA, and pay the
+                contributor with a real blockchain transaction the moment you approve
+                their work.
+            </p>
+
+            <div class="project-links">
+
+                <!-- <a href="https://your-live-demo-url.com" target="_blank" class="btn btn-primary">
+                    <i class="fas fa-external-link-alt"></i> Live Demo
+                </a> -->
+
+                <a href="https://github.com/Mohan24th/Bounty_Hunt" target="_blank" class="btn btn-outline">
+                    <i class="fab fa-github"></i> Source Code
+                </a>
+
+
+            </div>
+
+        </section>
+
+        <!-- USE CASE -->
+        <section class="project-section">
+
+            <h2>
+                <i class="fas fa-bullseye"></i>
+                Use Case & Problem Solved
+            </h2>
+
+            <div class="project-content">
+
+                <p>
+                    Getting paid for online work still runs on trust. Contributors do
+                    the work first and hope the poster pays; posters pay first and
+                    hope the work arrives. Freelance platforms take large cuts and
+                    hold funds, and community/DAO bounties live in scattered
+                    spreadsheets and chat threads with no verifiable record of who
+                    was paid.
+                </p>
+
+                <br>
+
+                <p>
+                    <strong>Bounty Board DAO</strong> turns the payout itself into a
+                    blockchain transaction. No middleman, no custody of funds, and
+                    wallet‑native identity via the CIP‑30 standard (Eternl, Lace,
+                    Nami, Yoroi, and more).
+                </p>
+
+                <br>
+
+                <h3>Key Features:</h3>
+
+                <ul style="list-style-position: inside; margin-top: 1rem; color: var(--text-secondary);">
+                    <li>Wallet connect for any installed CIP‑30 wallet (Eternl, Lace, Nami, Yoroi)</li>
+                    <li>Post &amp; fund bounties denominated in ADA</li>
+                    <li>Claim flow with a note field for work delivery links</li>
+                    <li>Approve &amp; pay — builds, signs, and submits a real <code>sendLovelace</code> transaction on
+                        Preprod</li>
+                    <li>Network and balance guardrails before every payout</li>
+                    <li>Verifiable receipts — each paid bounty links to Cardanoscan</li>
+                </ul>
+
+            </div>
+
+        </section>
+
+        <!-- DESCRIPTION -->
+        <section class="project-section">
+
+            <h2>
+                <i class="fas fa-info-circle"></i>
+                Project Description
+            </h2>
+
+            <div class="project-content">
+
+                <p>
+                    <strong>Bounty Board DAO</strong> is a full‑stack Web3 application
+                    built on Cardano's Preprod testnet. The frontend is built with
+                    Next.js (App Router) and TypeScript, while the Web3 layer uses
+                    the <strong>Mesh SDK</strong> for CIP‑30 wallet interactions and
+                    transaction building.
+                </p>
+
+                <br>
+
+                <p>
+                    A poster connects their wallet and lists a task with an ADA
+                    reward. Contributors connect their wallet, browse open bounties,
+                    and submit a claim with a note linking their work. The poster
+                    reviews the claim and clicks <strong>Approve &amp; pay</strong> —
+                    the app builds a transaction that pays the contributor directly.
+                    The poster signs in their wallet, and the payment settles on‑chain
+                    with a public, verifiable receipt on Cardanoscan.
+                </p>
+
+                <br>
+
+                <p>
+                    The payout logic uses the Mesh SDK's <code>Transaction</code>
+                    builder to call <code>sendLovelace</code> with the reward amount.
+                    Guardrails check the network (Preprod vs. mainnet) and ensure the
+                    poster's balance can cover the reward + fees before signing.
+                </p>
+
+                <br>
+
+                <p>
+                    <strong>Key Concepts Implemented:</strong><br>
+                    • CIP‑30 Wallet Integration (Eternl, Lace, Nami, Yoroi)<br>
+                    • Mesh SDK &amp; Blockfrost Provider<br>
+                    • Transaction building and signing on Cardano<br>
+                    • Next.js App Router (server components + client components)<br>
+                    • In‑memory store (easily swappable for a database)<br>
+                    • Real‑time bounty status updates<br>
+                    • Preprod testnet deployment
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- TECH STACK -->
+        <section class="project-section">
+
+            <h2>
+                <i class="fas fa-layer-group"></i>
+                Tech Stack
+            </h2>
+
+            <div class="tech-stack">
+
+                <div class="tech-item">
+                    <i class="fab fa-react"></i>
+                    <span>Next.js</span>
+                </div>
+
+                <div class="tech-item">
+                    <i class="fas fa-code"></i>
+                    <span>TypeScript</span>
+                </div>
+
+                <div class="tech-item">
+                    <i class="fas fa-link"></i>
+                    <span>Mesh SDK</span>
+                </div>
+
+                <div class="tech-item">
+                    <i class="fas fa-cube"></i>
+                    <span>Cardano</span>
+                </div>
+
+                <div class="tech-item">
+                    <i class="fas fa-wallet"></i>
+                    <span>CIP‑30</span>
+                </div>
+
+                <div class="tech-item">
+                    <i class="fas fa-cloud"></i>
+                    <span>Blockfrost</span>
+                </div>
+
+                <div class="tech-item">
+                    <i class="fas fa-database"></i>
+                    <span>In‑memory Store</span>
+                </div>
+
+                <div class="tech-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <span>Pitch Deck</span>
+                </div>
+
+            </div>
+
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Mohan. All rights reserved.</p>
+        </footer>
+
+    </main>
+
+</body>
+
+</html>
