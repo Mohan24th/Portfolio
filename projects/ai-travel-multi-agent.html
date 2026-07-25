@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Travel Planning System | Mohan</title>
+
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Common CSS -->
+    <!-- Main Portfolio CSS -->
+    <link rel="stylesheet" href="../style.css">
+    <!-- Project Specific CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <ul class="nav-links">
+            <li><a href="../index.html#hero"><i class="fas fa-home"></i> <span>Home</span></a></li>
+            <li><a href="../index.html#projects" class="active"><i
+                        class="fas fa-laptop-code"></i><span>Projects</span></a></li>
+            <li><a href="../index.html#contact"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
+        </ul>
+
+        <div class="social-links-mini">
+            <a href="https://github.com/Mohan24th" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/adapa-mohan-33796a281/" target="_blank"><i
+                    class="fab fa-linkedin"></i></a>
+        </div>
+    </nav>
+
+    <main class="content">
+
+        <!-- HERO -->
+        <section class="project-hero">
+            <h1>AI Travel Planning System</h1>
+            <p class="project-tagline">
+                A real-world multi-agent AI system built with LangGraph that plans complete trips automatically —
+                flights, hotels and itinerary — through 4 collaborating agents.
+            </p>
+
+            <div class="project-links">
+                <a href="https://github.com/Mohan24th/Ai-travel---Multi-Agent-System" target="_blank"
+                    class="btn btn-primary">
+                    <i class="fab fa-github"></i> Source Code
+                </a>
+            </div>
+        </section>
+
+        <!-- USE CASE -->
+        <section class="project-section">
+            <h2><i class="fas fa-bullseye"></i> Use Case & Problem Solved</h2>
+            <div class="project-content">
+                <p>
+                    Planning a trip usually means juggling multiple tabs — flight search, hotel comparisons, and
+                    manually stitching together a day-by-day itinerary. This project automates that entire workflow
+                    using a coordinated team of AI agents built on LangGraph, each responsible for one part of the
+                    trip-planning process.
+
+                    A single natural-language prompt like "Plan a complete 7 day Japan trip including flights, hotels
+                    and sightseeing under 2 lakhs" is enough for the system to research, plan and generate a
+                    ready-to-use travel plan.
+                </p>
+
+                <br>
+                <h3>Key Features:</h3>
+                <ul style="list-style-position: inside; margin-top: 1rem; color: var(--text-secondary);">
+                    <li>Flight Search Agent using real-time flight data</li>
+                    <li>Hotel Search Agent powered by live web search</li>
+                    <li>Itinerary Planning Agent generating day-by-day plans</li>
+                    <li>Final Response Agent that consolidates everything into one answer</li>
+                    <li>Long-term conversation memory using PostgreSQL</li>
+                    <li>Streamlit web interface for an end-to-end chat experience</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- DESCRIPTION -->
+        <section class="project-section">
+            <h2><i class="fas fa-info-circle"></i> Project Description</h2>
+            <div class="project-content">
+                <p>
+                    The system is orchestrated as a LangGraph state machine. A shared <code>TravelState</code> object
+                    flows through four nodes in sequence: the Flight Agent fetches live flight data via the
+                    AviationStack API, the Hotel Agent runs a Tavily-powered web search for the best hotel options,
+                    the Itinerary Agent (running on Groq's Llama 3.3 70B) turns those results into a structured
+                    day-by-day plan, and the Final Response Agent combines flights, hotels and itinerary into one
+                    coherent recommendation.
+                </p>
+
+                <br>
+
+                <p>
+                    Every conversation is checkpointed to PostgreSQL using LangGraph's Postgres checkpointer, so the
+                    system remembers prior context per user thread — the same compiled graph powers both a terminal
+                    interface and a Streamlit web app, giving users a choice between a quick CLI test and a full
+                    browser-based planner.
+                </p>
+
+                <br>
+
+                <p>
+                    Key Concepts Used:<br>
+                    • LangGraph state graphs & multi-agent orchestration<br>
+                    • LLM-powered reasoning with Groq (Llama 3.3 70B)<br>
+                    • Real-time API integration (flights & web search)<br>
+                    • Persistent memory with PostgreSQL checkpointing<br>
+                    • Streamlit for the interactive front-end
+                </p>
+            </div>
+        </section>
+
+        <!-- TECH STACK -->
+        <section class="project-section">
+            <h2><i class="fas fa-layer-group"></i> Tech Stack</h2>
+            <div class="tech-stack">
+                <div class="tech-item"><i class="fas fa-diagram-project"></i><span>LangGraph</span></div>
+                <div class="tech-item"><i class="fas fa-link"></i><span>LangChain</span></div>
+                <div class="tech-item"><i class="fas fa-bolt"></i><span>Groq</span></div>
+                <div class="tech-item"><i class="fas fa-brain"></i><span>Llama 3.3 70B</span></div>
+                <div class="tech-item"><i class="fas fa-database"></i><span>PostgreSQL</span></div>
+                <div class="tech-item"><i class="fas fa-stream"></i><span>Streamlit</span></div>
+                <div class="tech-item"><i class="fas fa-magnifying-glass"></i><span>Tavily API</span></div>
+                <div class="tech-item"><i class="fas fa-plane"></i><span>AviationStack API</span></div>
+                <div class="tech-item"><i class="fab fa-python"></i><span>Python</span></div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Mohan. All rights reserved.</p>
+        </footer>
+
+    </main>
+
+
+</body>
+
+</html>

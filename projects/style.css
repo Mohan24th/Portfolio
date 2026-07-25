@@ -2,12 +2,11 @@
 /* Inherits global variables and base styles from ../style.css */
 
 .content {
-    /* Override main content padding for project pages if needed, 
-       but generally we want to keep it consistent. 
-       Resetting margin/padding here to align with main layout */
     margin-left: var(--nav-width);
-    padding: 4rem;
-    max-width: 1200px;
+    padding: 4rem 5rem;
+    max-width: 1280px;
+    position: relative;
+    z-index: 2;
 }
 
 /* ===== HERO ===== */
@@ -18,20 +17,27 @@
 }
 
 .project-hero h1 {
-    font-size: 3.5rem;
+    font-size: 4.2rem;
     margin-bottom: 1.5rem;
-    background: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--ink-black);
+    font-family: 'Architects Daughter', cursive;
     line-height: 1.2;
+    text-shadow: 4px 4px 0px var(--accent-yellow);
+    display: inline-block;
 }
 
 .project-tagline {
-    color: var(--text-secondary);
-    font-size: 1.2rem;
-    max-width: 700px;
+    color: var(--ink-dark);
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.35rem;
+    max-width: 760px;
     margin: 0 auto 2rem auto;
-    line-height: 1.6;
+    line-height: 1.7;
+    background: var(--accent-yellow);
+    padding: 10px 20px;
+    border-radius: var(--radius-sketch-1);
+    border: 2.5px dashed var(--ink-black);
+    box-shadow: 3px 3px 0px var(--ink-black);
 }
 
 .project-links {
@@ -43,31 +49,51 @@
 
 /* ===== SECTIONS ===== */
 .project-section {
-    margin-bottom: 5rem;
+    margin-bottom: 4.5rem;
 }
 
 .project-section h2 {
     margin-bottom: 2rem;
-    font-size: 2rem;
+    font-size: 2.2rem;
     display: flex;
     align-items: center;
     gap: 15px;
-    color: var(--text-primary);
+    color: var(--ink-black);
+    font-family: 'Architects Daughter', cursive;
 }
 
 .project-section h2 i {
     color: var(--accent-primary);
+    background: var(--accent-yellow);
+    padding: 8px;
+    border-radius: 50%;
+    border: 2.5px solid var(--ink-black);
+    box-shadow: 2px 2px 0px var(--ink-black);
 }
 
 .project-content {
-    color: var(--text-secondary);
-    line-height: 1.8;
-    font-size: 1.05rem;
-    max-width: 900px;
+    color: var(--ink-dark);
+    line-height: 1.85;
+    font-size: 1.15rem;
+    max-width: 950px;
     background: var(--bg-secondary);
-    padding: 2.5rem;
-    border-radius: var(--border-radius);
-    border: 1px solid rgba(255, 255, 255, 0.03);
+    padding: 2.8rem;
+    border-radius: var(--radius-sketch-card);
+    border: var(--sketch-border);
+    box-shadow: var(--sketch-shadow);
+    position: relative;
+}
+
+.project-content::before {
+    content: '';
+    position: absolute;
+    top: -14px;
+    left: 40px;
+    width: 85px;
+    height: 26px;
+    background: var(--marker-pink);
+    border: 1.5px solid rgba(0, 0, 0, 0.2);
+    transform: rotate(-2deg);
 }
 
 /* ===== TECH STACK ===== */
@@ -75,32 +101,36 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
 }
 
 .tech-item {
-    padding: 0.8rem 1.5rem;
+    padding: 0.75rem 1.5rem;
     background: var(--bg-secondary);
-    border-radius: 30px;
+    border-radius: var(--radius-sketch-1);
     display: flex;
     align-items: center;
     gap: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 2.5px solid var(--ink-black);
+    box-shadow: 3px 3px 0px var(--ink-black);
     transition: var(--transition);
-    font-size: 0.95rem;
-    color: var(--text-secondary);
+    font-family: 'Fira Code', monospace;
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: var(--ink-black);
 }
 
 .tech-item i {
-    color: var(--accent-secondary);
-    font-size: 1.1rem;
+    color: var(--accent-blue);
+    font-size: 1.2rem;
 }
 
 .tech-item:hover {
-    border-color: var(--accent-primary);
-    background: rgba(139, 92, 246, 0.1);
-    color: var(--text-primary);
-    transform: translateY(-3px);
+    border-color: var(--ink-black);
+    background: var(--accent-yellow);
+    color: var(--ink-black);
+    transform: translateY(-4px) rotate(-2deg) scale(1.06);
+    box-shadow: 5px 5px 0px var(--ink-black);
 }
 
 /* ===== MOBILE ===== */
@@ -109,11 +139,10 @@
         margin-left: 0;
         padding: 2rem 1.5rem;
         padding-bottom: 100px;
-        /* Space for mobile nav */
     }
 
     .project-hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
     }
 
     .project-links {
