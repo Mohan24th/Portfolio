@@ -1,175 +1,271 @@
-/* ===== PROJECT SPECIFIC STYLES ===== */
-/* Inherits global variables and base styles from ../style.css */
+/* ==================================================
+   projects/style.css
+   Extends ../style.css design tokens for project detail pages.
+   Uses the same Oswald / Inter / Caveat system,
+   same palette, same offset-shadow card aesthetic.
+   ================================================== */
 
+/* ============ PROJECT PAGE LAYOUT ============ */
+/*
+   Project pages use:
+     nav.sidebar + main.content
+   
+   style.css (loaded first) handles the sidebar.
+   Here we override .content for the project page context.
+*/
 .content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 120px 4vw 4rem;
+    margin-left: var(--sidebar-width);
+    padding: 5rem 5vw 5rem;
+    max-width: 1080px;
     position: relative;
 }
 
-/* ===== HERO ===== */
+/* ============ PROJECT HERO ============ */
 .project-hero {
-    text-align: center;
-    margin-bottom: 6rem;
-    position: relative;
-    padding: 4rem 0;
-    background: var(--yellow);
-    border: 4px solid var(--ink);
-    border-radius: var(--radius-lg);
-    box-shadow: 10px 10px 0 var(--blue);
-    transform: rotate(-1deg);
+    padding: 4rem 0 3rem;
+    margin-bottom: 4rem;
+    border-bottom: 2px solid var(--ink);
+    text-align: left;
+    /* Remove old centered / rotated styling */
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+    transform: none;
 }
 
 .project-hero h1 {
-    font-size: clamp(3rem, 7vw, 6rem);
-    margin-bottom: 1.5rem;
-    color: var(--ink);
-    font-weight: 900;
-    line-height: 0.95;
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-weight: 700;
     text-transform: uppercase;
+    letter-spacing: 0.02em;
+    line-height: 1;
+    color: var(--ink);
+    margin-bottom: 1.5rem;
+    /* Remove old text-shadow */
+    text-shadow: none;
+    display: block;
 }
 
+/* Tagline pill — v2 style */
 .project-tagline {
-    font-size: clamp(1.1rem, 2vw, 1.5rem);
-    color: var(--white);
-    background: var(--ink);
     display: inline-block;
-    padding: 1rem 2rem;
-    border-radius: 999px;
-    font-weight: 600;
-    transform: rotate(2deg);
-    max-width: 800px;
-    margin: 0 auto 2rem;
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.6;
+    color: var(--ink);
+    background: var(--yellow);
+    border: 2px solid var(--ink);
+    border-radius: var(--radius-sm);
+    padding: 0.8rem 1.4rem;
+    box-shadow: var(--shadow-solid-sm);
+    max-width: 720px;
+    margin-bottom: 0;
+    transform: none;
 }
 
 .project-links {
-    margin-top: 3rem;
+    margin-top: 2.5rem;
     display: flex;
-    gap: 1.5rem;
-    justify-content: center;
+    gap: 1rem;
     flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
-/* ===== SECTIONS ===== */
+/* ============ PROJECT SECTIONS ============ */
 .project-section {
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
     position: relative;
 }
 
 .project-section h2 {
-    margin-bottom: 3rem;
-    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-family: var(--font-display);
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--ink);
+    margin-bottom: 2rem;
     display: flex;
     align-items: center;
-    gap: 20px;
-    color: var(--ink);
-    font-weight: 900;
+    gap: 14px;
 }
 
+/* Section icon accent */
 .project-section h2 i {
-    color: var(--coral);
-    font-size: 0.8em;
+    font-size: 1.1rem;
+    color: var(--blue);
+    background: var(--yellow);
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--ink);
+    border-radius: var(--radius-sm);
+    box-shadow: 2px 2px 0 var(--ink);
+    flex-shrink: 0;
 }
 
+/* Content block — editorial card style from v2 */
 .project-content {
-    color: var(--ink);
-    line-height: 1.8;
-    font-size: 1.15rem;
     background: var(--white);
-    padding: 4rem;
-    border-radius: var(--radius-lg);
-    border: 3px solid var(--ink);
-    box-shadow: 8px 8px 0 var(--ink);
+    border: 2px solid var(--ink);
+    border-radius: var(--radius-sm);
+    padding: 2.5rem 3rem;
+    box-shadow: var(--shadow-solid-sm);
     position: relative;
+    /* Remove old pink tape pseudo */
 }
 
 .project-content::before {
+    /* Yellow accent bar replacing the old pink tape */
     content: '';
     position: absolute;
-    top: -20px;
-    left: 40px;
+    top: -3px;
+    left: 2rem;
     width: 60px;
-    height: 40px;
-    background: var(--coral);
-    border: 2px solid var(--ink);
-    border-radius: 4px;
-    transform: rotate(-5deg);
-    box-shadow: 2px 2px 0 var(--ink);
+    height: 5px;
+    background: var(--yellow);
+    border-radius: 0 0 var(--radius-sm) var(--radius-sm);
 }
 
-/* List styles within content */
+.project-content p {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.8;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.project-content h3 {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin-bottom: 0.5rem;
+}
+
+/* Lists inside project content */
 .project-content ul {
-    margin-top: 1.5rem;
-    margin-left: 1rem;
-    list-style-type: square;
+    margin-top: 1rem;
+    padding-left: 1rem;
+    list-style: none;
 }
 
-.project-content li {
-    margin-bottom: 1rem;
+.project-content ul li {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: #444;
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed rgba(0,0,0,0.1);
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    line-height: 1.6;
+    text-transform: none;
+    letter-spacing: 0;
 }
 
-/* ===== TECH STACK ===== */
+.project-content ul li::before {
+    content: '→';
+    color: var(--blue);
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+/* ============ TECH STACK ============ */
 .tech-stack {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.2rem;
-    margin-top: 2rem;
+    gap: 1rem;
+    margin-top: 0.5rem;
 }
 
 .tech-item {
-    padding: 0.8rem 1.5rem;
-    background: var(--cream);
-    border-radius: 999px;
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 10px;
-    border: 2px solid var(--ink);
-    box-shadow: 3px 3px 0 var(--ink);
-    transition: var(--transition);
-    font-family: var(--font-heading);
-    font-size: 1rem;
-    font-weight: 700;
+    gap: 8px;
+    padding: 0.6rem 1.1rem;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
     color: var(--ink);
+    background: var(--white);
+    border: 2px solid var(--ink);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-solid-sm);
+    transition: var(--transition);
 }
 
 .tech-item i {
     color: var(--blue);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .tech-item:hover {
-    background: var(--coral);
-    color: var(--white);
-    transform: translate(-3px, -3px);
-    box-shadow: 6px 6px 0 var(--ink);
+    background: var(--yellow);
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--ink);
 }
 
-.tech-item:hover i {
-    color: var(--yellow);
+/* ============ FOOTER ============ */
+footer {
+    margin-top: 4rem;
+    padding: 2rem 0;
+    border-top: 2px solid var(--ink);
+    text-align: left;
+    background: transparent;
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--ink);
 }
 
-/* ===== MOBILE ===== */
-@media (max-width: 900px) {
+footer p {
+    color: var(--ink);
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 1024px) {
     .content {
-        padding: 100px 4vw 4rem;
+        margin-left: 0;
+        padding: 2rem 5vw 4rem;
     }
 
     .project-hero {
-        padding: 3rem 1.5rem;
-        transform: none;
+        padding: 3rem 0 2.5rem;
+    }
+
+    .project-hero h1 {
+        font-size: 3rem;
     }
 
     .project-content {
-        padding: 2.5rem 1.5rem;
+        padding: 2rem 1.5rem;
+    }
+
+    .project-links {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 600px) {
+    .project-hero h1 {
+        font-size: 2.2rem;
     }
 
     .project-section h2 {
-        font-size: 2rem;
+        font-size: 1.4rem;
     }
 
-    .project-tagline {
-        padding: 0.8rem 1.2rem;
-        transform: none;
+    .tech-item {
+        font-size: 0.8rem;
+        padding: 0.5rem 0.9rem;
     }
 }
